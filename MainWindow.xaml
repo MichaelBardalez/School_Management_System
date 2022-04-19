@@ -1,0 +1,176 @@
+﻿<Window x:Class="StoreManagementDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreManagementDemo"
+        xmlns:materialDesign1="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Icon="C:\Users\michael\source\repos\SystemManagementDemo2\icon.ico"
+        WindowStyle="None"
+        AllowsTransparency="True">
+
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="97*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="541*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Right Panel -->
+        <Grid Grid.Column="1" Grid.Row="1" Background="#FFB4EDD6">
+            <ScrollViewer>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Height="150" Margin="20" Fill="White" RadiusX="10" RadiusY="10"/>
+                </Grid>
+            </ScrollViewer>    
+        </Grid>
+
+        <!-- Left Side Section Side Panel Section -->
+        <Grid Grid.Row="1">
+            <Grid.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.OpacityMask>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFC6E9C9" Offset="0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+
+            <!-- Side Panel Label -->
+            <Grid Background="#FF04444B">
+                <TextBlock Text="MJB" Foreground="White" FontSize="20" TextAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- DashBoard Icon and name-->
+            <StackPanel Grid.Row="1">
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="ViewDashboard"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Dashboard"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Students Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Students"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Teachers Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Teachers"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Faculty Members Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Faculty"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Department Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Departments"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Courses Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Courses"/>
+                    </Grid>
+                </Button>
+
+                <!-- Side Panel Payroll Section -->
+                <Button Margin="10" Background="white">
+                    <Grid Width="150">
+                        <materialDesign1:PackIcon Kind="Account"/>
+                        <TextBlock HorizontalAlignment="Center"  Text="Payroll"/>
+                    </Grid>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+        <!-- Top section Toolbar section -->
+        <Grid x:Name="GridToolBar" MouseDown="GridToolBar_MouseDown" Grid.ColumnSpan="2" Background="#FF0B5F68">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0" >
+                <Label HorizontalContentAlignment="Left" Margin="0,0,541,0" FontWeight="Bold" FontSize="30" Foreground="White">Management System</Label>
+                
+                <!-- Settings button  -->
+                <Button x:Name="BtnIcon4"
+                        Style="{DynamicResource MaterialDesignFlatButton}" Width="50" Height="50" 
+                        Background="White"
+                        Margin="0,0,10,0"
+                        Click="BtnIcon4_Click">
+                    <materialDesign1:PackIcon Kind="Settings"  Foreground="Red"/>
+                </Button>
+                
+                <!-- Notifications button -->
+                <Button x:Name="BtnIcon3"
+                        Style="{DynamicResource MaterialDesignFlatButton}" Width="50" Height="50" 
+                        Background="White"
+                        Margin="0,0,10,0"
+                        Click="BtnIcon3_Click">
+                    <materialDesign1:PackIcon Kind="Bell"  Foreground="Red"/>
+                </Button>
+                
+                <!-- Account Settings button-->
+                <Button x:Name="BtnIcon2"
+                        Style="{DynamicResource MaterialDesignFlatButton}" Width="50" Height="50" 
+                        Background="White"
+                        Margin="0,0,10,0"
+                        Click="BtnIcon2_Click">
+                    <materialDesign1:PackIcon Kind="Account"  Foreground="Red"/>
+                </Button>
+                
+                <!-- Shutdown button -->
+                <Button x:Name="BtnIcon"
+                        Style="{DynamicResource MaterialDesignFlatButton}" Width="50" Height="50" 
+                        Background="White"
+                        Click="BtnIcon_Click">
+                    <materialDesign1:PackIcon Kind="Power" Foreground="Red"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+
+
+
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemManagementDemo2", "SystemManagementDemo2.csproj", "{4FBE5B37-F16D-4205-AFCA-A536AB74C2F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FBE5B37-F16D-4205-AFCA-A536AB74C2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBE5B37-F16D-4205-AFCA-A536AB74C2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBE5B37-F16D-4205-AFCA-A536AB74C2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBE5B37-F16D-4205-AFCA-A536AB74C2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84738BBE-346C-4BD9-B480-7D7486A4F85A}
+	EndGlobalSection
+EndGlobal

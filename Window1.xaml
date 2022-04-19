@@ -1,0 +1,116 @@
+﻿<Window x:Class="StoreManagementDemo.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreManagementDemo"
+        xmlns:materialDesign1="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Log in" Height="500" Width="400" 
+        Icon="C:\Users\michael\source\repos\SystemManagementDemo2\icon.ico"
+        WindowStyle="SingleBorderWindow"  ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <!-- Defining Grid Rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!-- Adding application background Gradient -->
+            <Border Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF0B5F68" Offset="0.0"/>
+                        <GradientStop Color="#FF84EE22" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            
+            <!-- Application Image and name -->
+            <StackPanel >
+                <Image Source="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" Width="150" Margin="0,20,0,0"/>
+                <TextBlock Text="System Management Login"
+                           FontWeight="Light"
+                           FontFamily="Helvetica"
+                           FontSize="25"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,0"/>
+            </StackPanel>
+            
+            <!-- User name label -->
+            <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Label HorizontalAlignment="Center"
+                           Margin="65,0,0,0"
+                           FontSize="20"
+                           Foreground="White"
+                           >Username
+                    </Label>
+                </StackPanel>
+                
+                <!-- Username text box -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <TextBox FontFamily="Helvetica"
+                             Cursor="IBeam"
+                             FontWeight="Light"                         
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="black"
+                             Background="LightGray"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="30"
+                             Margin="65,0,0,0"/>                    
+                </StackPanel>
+                
+                <!-- Password label -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Label HorizontalAlignment="Center"
+                           Margin="65,0,0,0"
+                           FontSize="20"
+                           Foreground="White"
+                           Cursor="Arrow"
+                           >Password
+                    </Label>
+                </StackPanel>
+                
+                <!-- Password Text box -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <PasswordBox 
+                         Cursor="IBeam"
+                         FontFamily="Helvetica"
+                         FontWeight="Light"                         
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="black"
+                         Background="LightGray"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="30"
+                         Margin="65,0,0,0"/>
+                </StackPanel>
+
+                <!-- Login Button -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Button Name="loginBtn"
+                            Style="{DynamicResource MaterialDesignRaisedDarkButton}" Width="100" Height="50" 
+                            Background="black"
+                            Foreground="White"                           
+                            Click="LoginBtn_Click"
+                            ClickMode="Press"                            
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="65,20,0,0"
+                            Padding="10,10">Login
+                    </Button>                
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
